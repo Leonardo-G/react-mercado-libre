@@ -11,7 +11,11 @@ html{
     font-size: 62.5%;
 }
 
-p, input{
+a{
+    text-decoration: none;
+}
+
+p, input, a{
     font-size: 1.4rem;
     font-family: "Proxima Nova", sans-serif;
 }
