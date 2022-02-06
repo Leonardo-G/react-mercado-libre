@@ -1,0 +1,17 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/carousel";
+
+.img-slide{
+    height: 34rem;
+}
+
+.carousel-indicators .btn--slide{
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+}
