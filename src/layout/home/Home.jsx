@@ -125,6 +125,21 @@ export const Home = () => {
                         }
                     </div>
                 </section>
+                <section className='section'>
+                    <TituloSeccion 
+                        titulo="Te puede interesar" 
+                        enlace={ {
+                            disponible: false
+                        } }
+                    />
+                    <div className='descubrir_flex'>
+                        {
+                            categorias.map( categoria => (
+                                <TarjetaDescubrir key={ categoria.categoria } { ...categoria }/>
+                            ) )
+                        }
+                    </div>
+                </section>
             </div>
         </>
     )
