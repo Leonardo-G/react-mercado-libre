@@ -8,3 +8,65 @@
         margin-bottom: 2.2rem;
     }
 }
+
+.subscripcion{
+    background-color: #fff;
+    margin: 2rem 0;
+    border-radius: 6px;
+    .subscripcion__costo{
+        background: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+        display: flex;
+        align-items: center;
+        color: #fff;
+        justify-content: space-between;
+        padding: 1.6rem 2.4rem;
+        border-radius: 6px 6px 0 0;
+        .costo-nivel{
+            font-size: 2.6rem;
+            font-weight: 600;
+        }
+        .costo-info{
+            font-weight: 600;
+            .info-precio{
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .subscripcion__sub{
+        padding: 2rem 2.4rem;
+        font-size: 1.8rem;
+    }
+    .costo-beneficios{
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 2.4rem;
+        .beneficios-info{
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            flex: 1;
+        }
+        img{
+            width: 7.2rem;
+        }
+    }
+    .subscripcion__btn{
+        padding: 1.5rem 2.4rem;
+        border-top: 1px solid #ededed;
+        .subscripcion-esp{
+            padding: 1.8rem 0;
+            text-align: right;
+        }
+        a{
+            margin-top: 10rem;
+            background-color: #3483fa;
+            color: #fff;
+            transition: background-color .2s ease-in;
+            padding: 1.2rem 2.4rem;
+            border-radius: 6px;
+            &:hover{
+                background-color:#2968c8;
+            }
+        }
+    }
+}
