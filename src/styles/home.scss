@@ -65,3 +65,11 @@
         }
     }
 }
+
+.descubri{
+    padding: 5rem 0;
+    .descubri__tarjetas{
+        display: flex;
+        column-gap: 2rem;
+    }
+}

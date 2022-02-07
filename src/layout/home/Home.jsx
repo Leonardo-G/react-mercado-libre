@@ -3,9 +3,12 @@ import { Carousel } from './components/Carousel';
 import { VentanaProducto } from '../../components/VentanaProducto';
 import { Link } from 'react-router-dom';
 
+import { TituloSeccion } from './components/TituloSeccion';
+import { TarjetaDescubrir } from './components/TarjetaDescubrir';
+import { TarjetaBeneficios } from "./components/TarjetaBeneficios";
+
 import "../../styles/flex-item.scss";
 import "../../styles/home.scss";
-import { TituloSeccion } from './components/TituloSeccion';
 
 const ofertas = [
     { id: 1, img: "../../assets/productos/D_Q_NP_935558-MLA45017514805_022021-AB.webp", precio: "5499", oferta: { precioAnterior: "8000", disponible: true}, titulo: "Heladera w1321 asdas da 21321 2e", envio: { disponible: true, tipo: "basico"} },
@@ -13,6 +16,17 @@ const ofertas = [
     { id: 3, img: "../../assets/productos/D_Q_NP_935558-MLA45017514805_022021-AB.webp", precio: "5499", oferta: { precioAnterior: "8000", disponible: true}, titulo: "Heladera w1321 asdas da 21321 2e", envio: { disponible: false, tipo: "null"} },
     { id: 4, img: "../../assets/productos/D_Q_NP_935558-MLA45017514805_022021-AB.webp", precio: "5499", oferta: { precioAnterior: "8000", disponible: true}, titulo: "Heladera w1321 asdas da 21321 2e", envio: { disponible: true, tipo: "basico"} },
     { id: 5, img: "../../assets/productos/D_Q_NP_935558-MLA45017514805_022021-AB.webp", precio: "5499", oferta: { precioAnterior: "8000", disponible: true}, titulo: "Heladera w1321 asdas da 21321 2e", envio: { disponible: true, tipo: "basico"} }
+]
+
+const categorias = [
+    { categoria: "perfumes", img: "../../../../assets/categorias/D_NQ_991137-MLA49020685741_022022-C.webp", titulo: "Belleza a un click", descripcion: "Hasta 40% y 3x sin interés", url: "/" },
+    { categoria: "vinos", img:"../../../../assets/categorias/D_NQ_709168-MLA49004288849_022022-C.webp", titulo: "Dis de los enamorados", descripcion: "Hasta 30% off en supermercado", url: "/"},
+]
+
+const beneficios = [
+    { id: 1, titulo: "Subscribiendote al nivel 6", img: "../../../assets/beneficios/comboplus-brand.png", portada: "../../../assets/beneficios/disney-nivel6-mla-mco-mlm@2x.png", beneficio: { disponible: false, descuento: "null", dias: "null" }},
+    { id: 2, titulo: "HBO Max", img: "../../../assets/beneficios/comboplus-brand.png", portada: "../../../assets/beneficios/hbo-max-mla-mco-mlc@2x.jpg", beneficio: { disponible: true, descuento: "50%", dias: "7 días gratis" }},
+    { id: 3, titulo: "Paramount+", img: "../../../assets/beneficios/comboplus-brand.png", portada: "../../../assets/beneficios/paramount-widget-mla@2x.jpg", beneficio: { disponible: true, descuento: "40%", dias: "7 días gratis" }},
 ]
 
 export const Home = () => {
@@ -79,8 +93,22 @@ export const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section>
-                    
+                <section className='descubri'>
+                    <TituloSeccion 
+                        titulo="Beneficios de Mercado Puntos" 
+                        enlace={ {
+                            disponible: true,
+                            redirigir: "/",
+                            descripcion: "Ver todos los beneficios"
+                        } }
+                    />
+                    <div className='descubri__tarjetas'>
+                        {
+                            beneficios.map( beneficios => (
+                                <TarjetaBeneficios key={ beneficios.id } { ...beneficios }/>
+                            ))
+                        }
+                    </div>
                 </section>
             </div>
         </>
