@@ -66,9 +66,17 @@
     }
 }
 
-.descubri{
+.beneficios{
     padding: 5rem 0;
-    .descubri__tarjetas{
+    .beneficios__tarjetas{
+        display: flex;
+        column-gap: 2rem;
+    }
+}
+
+.descubrir{
+    padding: 4rem 0;
+    .descubrir_flex{
         display: flex;
         column-gap: 2rem;
     }

@@ -93,7 +93,7 @@ export const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section className='descubri'>
+                <section className='beneficios'>
                     <TituloSeccion 
                         titulo="Beneficios de Mercado Puntos" 
                         enlace={ {
@@ -102,11 +102,26 @@ export const Home = () => {
                             descripcion: "Ver todos los beneficios"
                         } }
                     />
-                    <div className='descubri__tarjetas'>
+                    <div className='beneficios__tarjetas'>
                         {
                             beneficios.map( beneficios => (
                                 <TarjetaBeneficios key={ beneficios.id } { ...beneficios }/>
                             ))
+                        }
+                    </div>
+                </section>
+                <section className='descubrir'>
+                    <TituloSeccion 
+                        titulo="Descubrí" 
+                        enlace={ {
+                            disponible: false,
+                        } }
+                    />
+                    <div className='descubrir_flex'>
+                        {
+                            categorias.map( categoria => (
+                                <TarjetaDescubrir key={ categoria.categoria } { ...categoria }/>
+                            ) )
                         }
                     </div>
                 </section>
